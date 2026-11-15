@@ -9,7 +9,7 @@ namespace Tyuiu.TashovVD.Sprint5.Task2.V29.Lib
         {
             int[,] res = new int[matrix.GetLength(0), matrix.GetLength(1)];
 
-            string path = $@"{Path.GetTempPath()}\OutPutFileTask2.txt";
+            string path = $@"{Path.GetTempPath()}OutPutFileTask2.txt";
 
             FileInfo fileInfo = new FileInfo(path);
             bool fileExists = fileInfo.Exists;
@@ -50,13 +50,13 @@ namespace Tyuiu.TashovVD.Sprint5.Task2.V29.Lib
                     }
                 }
 
-                if (i != res.GetLength(0))
+                if (i != res.GetLength(0) - 1)
                 {
                     File.AppendAllText(path, str + Environment.NewLine);
                 }
                 else
                 {
-                    File.AppendAllText(path, str);
+                    File.AppendAllText(path, str[..^1]);
                 }
                 str = "";
             }
