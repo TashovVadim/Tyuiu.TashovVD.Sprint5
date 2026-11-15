@@ -40,7 +40,7 @@ namespace Tyuiu.TashovVD.Sprint5.Task2.V29.Lib
             {
                 for (int j = 0; j < res.GetLength(1); j++)
                 {
-                    if (j != res.GetLength(1))
+                    if (j != (res.GetLength(1) - 1))
                     {
                         str += $"{res[i, j]};";
                     }
@@ -50,13 +50,13 @@ namespace Tyuiu.TashovVD.Sprint5.Task2.V29.Lib
                     }
                 }
 
-                if (i != res.GetLength(0) - 1)
+                if (i != (res.GetLength(0) - 1))
                 {
                     File.AppendAllText(path, str + Environment.NewLine);
                 }
                 else
                 {
-                    File.AppendAllText(path, str[..^1]);
+                    File.AppendAllText(path, str);
                 }
                 str = "";
             }
