@@ -10,7 +10,7 @@ namespace Tyuiu.TashovVD.Sprint5.Task0.V16.Lib
     {
         public string SaveToFileTextData(int x)
         {
-            string path = $@"{Directory.GetCurrentDirectory()}\OutPutFileTask0.txt";
+            string path = $@"{Path.GetTempPath()}\OutPutFileTask0.txt";
             double y = (2*Math.Pow(x, 2) - 1) / (Math.Sqrt(Math.Pow(x, 2) - 2));
             y = Math.Round(y, 2);
             
