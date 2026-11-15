@@ -19,7 +19,7 @@ namespace Tyuiu.TashovVD.Sprint5.Task1.V22.Lib
                 File.Delete(path);
             }
 
-            for (int x = startValue; x <= startValue; x++)
+            for (int x = startValue; x <= stopValue; x++)
             {
                 double y = 0;
                 if (x != startValue)
