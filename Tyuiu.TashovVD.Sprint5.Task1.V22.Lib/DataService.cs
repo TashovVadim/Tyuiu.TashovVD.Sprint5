@@ -22,7 +22,7 @@ namespace Tyuiu.TashovVD.Sprint5.Task1.V22.Lib
             for (int x = startValue; x <= stopValue; x++)
             {
                 double y = 0;
-                if (x != startValue)
+                if (x != stopValue)
                 {
                     if (x == 2)
                     {
