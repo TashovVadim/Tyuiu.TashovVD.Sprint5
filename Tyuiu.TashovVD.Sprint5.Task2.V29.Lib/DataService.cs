@@ -58,6 +58,7 @@ namespace Tyuiu.TashovVD.Sprint5.Task2.V29.Lib
                 {
                     File.AppendAllText(path, str);
                 }
+                str = "";
             }
 
             return path;
