@@ -30,8 +30,8 @@ namespace Tyuiu.TashovVD.Sprint5.Task1.V22.Lib
                     }
                     else
                     {
-                        y = Math.Sin(x) + ((Math.Cos(x) + 1) / (2 - x));
-                        y = Math.Round(y, 3);
+                        y = Math.Sin(x) + ((Math.Cos(x) + 1) / (2 - x)) + 2*x;
+                        y = Math.Round(y, 2);
                         File.AppendAllText(path, Convert.ToString(y) + Environment.NewLine);
                     }
                 }
@@ -43,8 +43,8 @@ namespace Tyuiu.TashovVD.Sprint5.Task1.V22.Lib
                     }
                     else
                     {
-                        y = Math.Sin(x) + ((Math.Cos(x) + 1) / (2 - x));
-                        y = Math.Round(y, 3);
+                        y = Math.Sin(x) + ((Math.Cos(x) + 1) / (2 - x)) + 2*x;
+                        y = Math.Round(y, 2);
                         File.AppendAllText(path, Convert.ToString(y));
                     }
                 }
