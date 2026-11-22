@@ -8,7 +8,7 @@ namespace Tyuiu.TashovVD.Sprint5.Task6.V3.Test
         [TestMethod]
         public void ValidLoadFromDataFile()
         {
-            string path = Path.Combine("C:", "DataSprint5", "InPutDataFileTask6V3.txt");
+            string path = Path.Combine("C:", "DataSprint5", "InPutDataFileTask7V5.txt");
             double wait = 21;
             DataService ds = new DataService();
             double res = ds.LoadFromDataFile(path);
