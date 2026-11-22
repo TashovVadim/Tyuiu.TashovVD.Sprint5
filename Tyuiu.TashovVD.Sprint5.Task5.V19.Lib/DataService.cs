@@ -22,11 +22,15 @@ namespace Tyuiu.TashovVD.Sprint5.Task5.V19.Lib
             }
             foreach (string line in lst)
             {
-                lst1.Add(Convert.ToDouble(line));
+                double obj = Convert.ToDouble(line);
+                if (((obj < 10.0) && (obj > -10.0)) && (Convert.ToInt32(obj) == obj))
+                {
+                    lst1.Add(obj);
+                }
             }
             mx = lst1.Max();
             mn = lst1.Min();
-            res = Math.Abs(mx) - Math.Abs(mn);
+            res = mx - mn;
 
             return res;
         }
