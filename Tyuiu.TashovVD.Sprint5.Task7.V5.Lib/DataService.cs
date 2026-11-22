@@ -18,8 +18,10 @@ namespace Tyuiu.TashovVD.Sprint5.Task7.V5.Lib
                     str = line;
                 }
             }
-
-            return Regex.Replace(str, @"[a-zA-Z]", "");
+            string res = Regex.Replace(str, @"[a-zA-Z]", "");
+            res = Regex.Replace(res, @" {2,}", " ");
+            res = Regex.Replace(res, @" +([.,!?;:])", "$1");
+            return res;
         }
     }
 }
