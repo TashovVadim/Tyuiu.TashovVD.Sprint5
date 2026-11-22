@@ -7,7 +7,10 @@ namespace Tyuiu.TashovVD.Sprint5.Task4.V5.Lib
     {
         public double LoadFromDataFile(string path)
         {
-            throw new NotImplementedException();
+            var val = File.ReadAllText(path);
+            val = val.Replace('.', ',');
+            double res = ((4.26*(Convert.ToDouble(val))) / (Math.Sin(Convert.ToDouble(val))));
+            return Math.Round(res, 3);
         }
     }
 }

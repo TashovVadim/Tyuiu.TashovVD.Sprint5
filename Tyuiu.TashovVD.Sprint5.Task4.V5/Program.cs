@@ -1,4 +1,5 @@
-﻿using Tyuiu.TashovVD.Sprint5.Task4.V5.Lib;
+﻿using System.Globalization;
+using Tyuiu.TashovVD.Sprint5.Task4.V5.Lib;
 
 namespace Tyuiu.TashovVD.Sprint5.Task4.V5
 {
@@ -25,15 +26,15 @@ namespace Tyuiu.TashovVD.Sprint5.Task4.V5
             Console.WriteLine("***************************************************************************");
 
             DataService ds = new DataService();
+            string path = Path.Combine("C:", "DataSprint5", "InPutDataFileTask4V5.txt");
 
-            string res = ds.LoadFromDataFile(3);
+            double res = ds.LoadFromDataFile(path);
 
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
             Console.WriteLine("***************************************************************************");
 
-            Console.WriteLine("Файл" + res);
-            Console.WriteLine("Создан!");
+            Console.WriteLine(res);
 
             Console.ReadKey();
         }
